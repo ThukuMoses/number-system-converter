@@ -1,12 +1,27 @@
 # Number system converter Logic
 
 def convert_n(num_str, from_base, to_base):
+    digits_char="0123456789ABCDEF"
+
+    #-- Validate bases
+    if not (2<=from_base<=16) or not(2<=to_base<=16):
+        raise ValueError("Bases must be between 2 and 16!")
+    
+    #-- validate inputs
+    num_str=num_str.strip().upper()
+    if not num_str:
+        raise ValueError("Input cannot be empty!")
 
     #  Step 1: Convert input to decimal system
     if "." in num_str:
         integer_part, fraction_part = num_str.split(".")
     else:
         integer_part, fraction_part = num_str, ""
+
+    #-- validate digits
+    for d in integer_part + fraction_part:
+        if d not in digits_char[:from_base]:
+            raise ValueError(f"Invalid digit '{d}' for base {from_base}")
 
     # integer part to decimal
     decimal_int = int(integer_part, from_base)
@@ -29,7 +44,7 @@ def convert_n(num_str, from_base, to_base):
         while int_part > 0:#keep extracting digits until number is fully converted
 
             #Take remainder of int_part % to_base as index to get corresponding character (0–F) and append to digits
-            digits.append("0123456789ABCDEF"[int_part % to_base])
+            digits.append(digits_char[int_part % to_base])
 
             #Divide int_part by base, keep only integer part, continue conversion.
             int_part //= to_base
@@ -44,7 +59,7 @@ def convert_n(num_str, from_base, to_base):
 
         frac_part *= to_base
         digit = int(frac_part)#take integer part frac_part and store it in digit
-        frac_digits.append("0123456789ABCDEF"[digit])#look up for the digit in digits that matches the index(digit)
+        frac_digits.append(digits_char[digit])#add digit to digits
         frac_part -= digit#Remove the integer part, keep the remaining fraction for next iteration
 
         if frac_part == 0:#break early 
@@ -56,4 +71,5 @@ def convert_n(num_str, from_base, to_base):
     else:
         return int_converted
 
-print(convert_n("101.10", 2, 10))
+if __name__=='__main__':
+    print(convert_n("1001.111",2,10))
