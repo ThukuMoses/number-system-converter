@@ -1,11 +1,11 @@
 NUMBER SYSTEM CONVERSION AUTOMATION PROJECT
 COURSE: SPC2207
 GROUP MEMBERS:
-MOSES RUNANU CT101/G/22122/24
-BRIAN MUNENE CT101/G/21785/24
-AUGUSTINE OWAYA CT101/G/23524/24
+MOSES RUNANU CT101/G/22122/24 (RunanuM)
+BRIAN MUNENE CT101/G/21785/24 (
+AUGUSTINE OWAYA CT101/G/23524/24 (Silverincognito)
 CLAIRE JEPNG’ETICH CT101/G/22839/24
-QUEEN ESTHER CT101/G/22453/24
+QUEEN ESTHER CT101/G/22453/24 (Esther-qu33n)
 
 INTRODUCTION
 Number systems are a technique to represent numbers in the computer system architecture, every value that you are saving or getting into or from computer memory has a defined number system. The number system is used in the computer system for better communication and representation. We type letters or words into a computer system but computers do not understand words and letters; therefore, it converts every letter and word into numbers for better understanding and processing.
