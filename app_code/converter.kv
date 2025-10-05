@@ -1,0 +1,195 @@
+<ConverterLayout>:
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: (0.1, 0.15, 0.25, 1)   # deep navy background
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    # Header
+    BoxLayout:
+        size_hint: 1, 0.12
+        padding: 10
+        canvas.before:
+            Color:
+                rgba: (0.2, 0.6, 0.8, 1)   # teal header
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "Number System Converter"
+            font_size: '24sp'
+            bold: True
+            color: 1,1,1,1
+
+    # Input / Output Area
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, 0.18
+        padding: [20, 10, 20, 10]
+        spacing: 20
+
+        # Input
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            Label:
+                text: "Enter Value"
+                font_size: '20sp'
+                color: 1,1,1,1
+            TextInput:
+                id: input_value
+                multiline: False
+                font_size: '18sp'
+                background_color: 1,1,1,1
+                foreground_color: 0,0,0,1
+
+        # Output
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            Label:
+                text: "Output Value"
+                font_size: '20sp'
+                color: 1,1,1,1
+            Label:
+                id: result_label
+                text: ''
+                font_size: '18sp'
+                color: 0,0,0,1
+                halign: 'center'
+                valign: 'middle'
+                text_size: self.size
+                canvas.before:
+                    Color:
+                        rgba: 1,1,1,1
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [8]
+
+    # Conversion Title
+    BoxLayout:
+        size_hint: 1, 0.08
+        padding: 10
+        canvas.before:
+            Color:
+                rgba: (0.2, 0.6, 0.8, 1)  # teal bar
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "Conversion"
+            font_size: '20sp'
+            bold: True
+            color: 1,1,1,1
+
+    # Buttons Grid
+    GridLayout:
+        cols: 3
+        rows: 4
+        spacing: [12, 12]
+        padding: [15, 15]
+        size_hint: 0.85, 0.55
+        pos_hint: {"center_x": 0.5}
+
+        Button:
+            text: 'BIN --> OCT'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 2, 8)
+
+        Button:
+            text: 'BIN --> DEC'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 2, 10)
+
+        Button:
+            text: 'BIN --> HEX'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 2, 16)
+
+        Button:
+            text: 'HEX --> OCT'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 16, 8)
+
+        Button:
+            text: 'HEX --> DEC'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 16, 10)
+
+        Button:
+            text: 'HEX --> BIN'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 16, 2)
+
+        Button:
+            text: 'DEC --> HEX'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 10, 16)
+
+        Button:
+            text: 'DEC --> OCT'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 10, 8)
+
+        Button:
+            text: 'DEC --> BIN'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 10, 2)
+
+        Button:
+            text: 'OCT --> HEX'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 8, 16)
+
+        Button:
+            text: 'OCT --> DEC'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 8, 10)
+
+        Button:
+            text: 'OCT --> BIN'
+            font_size: '16sp'
+            background_normal: ''
+            background_color: (0.5,0.5,0.8,1)
+            on_release: root.convert_number(input_value.text, 8, 2)
+
+>>>>>>> 53ea3b9 (changes in kv file for compatibility with android screen)
+git pull --rebase origin dev
+From github.com:RunanuM/number-system-converter
+ * branch            dev        -> FETCH_HEAD
+Auto-merging app_code/converter.kv
+CONFLICT (add/add): Merge conflict in app_code/converter.kv
+Auto-merging app_code/main.py
+CONFLICT (content): Merge conflict in app_code/main.py
+error: could not apply 53ea3b9... changes in kv file for compatibility with android screen
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply 53ea3b9... changes in kv file for compatibility with android screen
