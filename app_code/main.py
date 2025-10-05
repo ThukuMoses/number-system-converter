@@ -1,6 +1,10 @@
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
+<<<<<<< HEAD
 from Converter import convert_n  # import your logic
+=======
+from Converter import convert_n  # import logic
+>>>>>>> 53ea3b9 (changes in kv file for compatibility with android screen)
 
 
 class ConverterLayout(BoxLayout):

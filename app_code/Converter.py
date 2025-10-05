@@ -72,4 +72,4 @@ def convert_n(num_str, from_base, to_base):
         return int_converted
 
 if __name__=='__main__':
-    print(convert_n("1001.111",2,10))
+    print(convert_n("1001.111",2,10))#test 
