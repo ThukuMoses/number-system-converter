@@ -14,5 +14,6 @@ The user enters the number they want to convert to in the input field labelled '
 Clone the repository or download the files.
 Esure you have python3 and kivy installed(check requirements.txt for kivy)
 In your terminal, run:
+
     python main.py 
 
