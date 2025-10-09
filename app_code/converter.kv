@@ -1,3 +1,30 @@
+# =============================================================================
+# File: converter.kv
+# Program: Base Converter APK
+# Version: 0.1
+# Author: Moses Runanu
+# Release Date: October 2025
+# =============================================================================
+#
+# Description:
+# This Kivy file defines the graphical user interface (GUI) for the Base Converter
+# app. It specifies the layout, widgets, and styling used in the mobile APK.
+# Users can enter a number, click button holding the input and target base, and view the 
+# converted result.
+#
+# Key Features:
+# - TextInput fields for number entry.
+# - Button to trigger conversion.
+# - Label and field to display the conversion result.
+#
+# Usage:
+# This file is automatically loaded by main.py. No direct execution is needed.
+#
+# Notes:
+# - All styling and layout are contained here; logic resides in main.py.
+# - Designed to work on Android devices through the packaged APK.
+# =============================================================================
+
 <ConverterLayout>:
     orientation: 'vertical'
     canvas.before:
@@ -178,18 +205,3 @@
             background_color: (0.5,0.5,0.8,1)
             on_release: root.convert_number(input_value.text, 8, 2)
 
->>>>>>> 53ea3b9 (changes in kv file for compatibility with android screen)
-git pull --rebase origin dev
-From github.com:RunanuM/number-system-converter
- * branch            dev        -> FETCH_HEAD
-Auto-merging app_code/converter.kv
-CONFLICT (add/add): Merge conflict in app_code/converter.kv
-Auto-merging app_code/main.py
-CONFLICT (content): Merge conflict in app_code/main.py
-error: could not apply 53ea3b9... changes in kv file for compatibility with android screen
-hint: Resolve all conflicts manually, mark them as resolved with
-hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
-hint: You can instead skip this commit: run "git rebase --skip".
-hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
-hint: Disable this message with "git config advice.mergeConflict false"
-Could not apply 53ea3b9... changes in kv file for compatibility with android screen
